@@ -2,7 +2,7 @@
 Họ Tên|Lớp|Email
 -|-|-
 Lê Minh Ngọc|11CTIN|ngocminhle1314@gmail.com
-Bùi Thị Bích Loan|11CTIN|@gmail.com
+Bùi Thị Bích Loan|11CTIN|bloan0908@gmail.com
 
 # Thông tin project
 ## Đề tài:
