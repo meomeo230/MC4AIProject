@@ -2,7 +2,33 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df_database = pd.read_csv("https://raw.githubusercontent.com/meomeo230/MC4AIProject/main/score.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/meomeo230/MC4AIProject/main/score.csv")
+
+df.dropna(subset=['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'BONUS'], inplace=True)
+df['REG-MC4AI'].fillna('N', inplace=True)
+
+def calculate(row):
+  if row['CLASS'].find("CV") !=-1:
+    return 'Chuyên Văn' 
+  elif (row['CLASS'].find("CT") !=-1) & (row['CLASS'].find("CTIN") ==-1):
+    return 'Chuyên Toán'
+  elif row['CLASS'].find("CL") !=-1:
+    return 'Chuyên Lý' 
+  elif row['CLASS'].find("CH") !=-1:
+    return 'Chuyên Hóa' 
+  elif row['CLASS'].find("CA") !=-1:
+    return 'Chuyên Anh'
+  elif (row['CLASS'].find("CT") !=-1) & (row['CLASS'].find("CTIN") !=-1):
+    return 'Chuyên Tin'
+  elif row['CLASS'].find("CTRN") !=-1:
+    return 'Trung Nhật'
+  elif row['CLASS'].find("CSD") !=-1:
+    return 'Sử Địa'
+  elif (row['CLASS'].find("TH") !=-1) | (row['CLASS'].find("SN") !=-1):
+    return 'Tích Hợp/Song Ngữ'
+  else: 
+    return 'Khác'
+df['CLASS-GROUP'] = df.apply(calculate, axis=1)
 
 tab1, tab2, tab3, tab4 = st.tabs(["Danh sách", "Biểu đồ", "Phân nhóm", "Phân loại"])
 
@@ -10,9 +36,10 @@ with tab1:
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.write('Giới tính')
-        check = st.checkbox('Nam', value=True)
-        check1 = st.checkbox('Nữ', value=True)
-        
+        if st.checkbox('Nam', value=True):
+            df[(df['CLASS'].str.contains('10')) & (df["GENDER"] == "F")]
+        if = st.checkbox('Nữ', value=True)
+            df[(df['CLASS'].str.contains('10')) & (df["GENDER"] == "M")]
     with col2:
         radio = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
         
