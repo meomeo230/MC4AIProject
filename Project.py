@@ -29,20 +29,20 @@ with tab1:
         k2 = st.checkbox('Toán', value=True)
         
     with co2:
-        k1 = st.checkbox('Lý', value=True)
-        k2 = st.checkbox('Hóa', value=True)
+        k3 = st.checkbox('Lý', value=True)
+        k4 = st.checkbox('Hóa', value=True)
         
     with co3:
-        k1 = st.checkbox('Anh', value=True)
-        k2 = st.checkbox('Tin', value=True)
+        k5 = st.checkbox('Anh', value=True)
+        k6 = st.checkbox('Tin', value=True)
         
     with co4:
-        k1 = st.checkbox('Sử Địa', value=True)
-        k2 = st.checkbox('Trung Nhật', value=True)
+        k7 = st.checkbox('Sử Địa', value=True)
+        k8 = st.checkbox('Trung Nhật', value=True)
         
      with co5:
-        k1 = st.checkbox('TH/SN', value=True)
-        k2 = st.checkbox('Khác', value=True)
+        k9 = st.checkbox('TH/SN', value=True)
+        k0 = st.checkbox('Khác', value=True)
         
 with tab2:
     tab5, tab6 = st.tabs(["Số lượng HS", "Điểm"])
