@@ -37,9 +37,9 @@ with tab1:
     with col1:
         a = st.radio('Giới tính', ('Nam', 'Nữ'), horizontal=False)
         if a == 'Nam':
-          df[(df["GENDER"] == "M")]
+          df[(df['GENDER'] == "M")]
         else:
-          df[(df["GENDER"] == "F")]
+          df[(df['GENDER'] == "F")]
     with col2:
         radio = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
         
