@@ -145,29 +145,36 @@ with tab2:
     tab5, tab6 = st.tabs(["Số lượng HS", "Điểm"])
     with tab5:
         st.subheader('Tỉ lệ học sinh học sáng chiều')
-        px.pie(df, names='Buổi học')
-        
+        f1 = px.pie(df, names='Buổi học')
+        st.write(f1)
+
         st.subheader('Tỉ lệ học sinh học sáng chiều')
-        px.pie(df, names='Phòng học')
+        f2 = px.pie(df, names='Phòng học')
+        st.write(f2)
 
         st.subheader('Tỉ lệ giới tính')
-        px.pie(df, names='GENDER')
+        f3 = px.pie(df, names='GENDER')
+        st.write(f3)
 
         st.subheader('Tỉ lệ khối lớp')
-        px.pie(df, names='Khối lớp')
+        f4 = px.pie(df, names='Khối lớp')
+        st.write(f4)
 
         st.subheader('Tỉ lệ các lớp')
-        px.pie(df, names='CLASS-GROUP')
+        f5 = px.pie(df, names='CLASS-GROUP')
+        st.write(f5)
 
         st.subheader('Tỉ lệ mong muốn được lên lớp')
-        px.pie(df, names='REG-MC4AI')
+        f6 = px.pie(df, names='REG-MC4AI')
+        st.write(f6)
 
         st.subheader('Tỉ lệ học sinh được lên lớp')
-        px.pie(df, names='LEN LOP')
+        f7 = px.pie(df, names='LEN LOP')
+        st.write(f7)
 
         st.subheader('Tỉ lệ học sinh chuyên và thường')
-        px.pie(df, names='Loại lớp')
-        
+        f8 = px.pie(df, names='Loại lớp')
+        st.write(f8)
     with tab6:
         radio1 = st.radio('Điểm từng Session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=True)
 with tab3:
