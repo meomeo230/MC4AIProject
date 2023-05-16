@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df_database = pd.read_csv("./data/data_BuLi_13_20_cleaned.csv")
+#df_database = pd.read_csv("./data/data_BuLi_13_20_cleaned.csv")
 
 tab1, tab2, tab3, tab4 = st.tabs(["Danh sách", "Biểu đồ", "Phân nhóm", "Phân loại"])
 
