@@ -77,6 +77,8 @@ def calculate1(row):
     return 'N'
 df['LEN LOP'] = df.apply(calculate1, axis=1)
 
+st.title('BẢNG ĐIỂM LỚP PY4AI 09/2022')
+
 tab1, tab2, tab3, tab4 = st.tabs(["Danh sách", "Biểu đồ", "Phân nhóm", "Phân loại"])
 
 with tab1:
@@ -148,7 +150,7 @@ with tab2:
         f1 = px.pie(df, names='Buổi học')
         st.write(f1)
 
-        st.subheader('Tỉ lệ học sinh học sáng chiều')
+        st.subheader('Tỉ lệ học sinh học phòng học')
         f2 = px.pie(df, names='Phòng học')
         st.write(f2)
 
@@ -179,7 +181,29 @@ with tab2:
         radio1 = st.radio('Điểm từng Session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=True)
 with tab3:
     slider = st.slider('Số nhóm', 2, 5, 3)
-    
+    def xetnhom(aa):
+      kmeans = KMeans(n_clusters=aa, n_init='auto')
+      kmeans.fit(X)
+      kmeans.labels_
+    def draw1():
+      plt.figure(figsize=(4,4))
+      plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
+      plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
+      plt.show()
+#2 nhóm
+    xetnhom(2)
+    draw1()
+
+#3 nhóm
+    xetnhom(3)
+    draw1()
+
+#4 nhóm
+    xetnhom(4)
+    draw1()
+
+    xetnhom(5)
+    draw1()
 with tab4:
     radio2 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
 
