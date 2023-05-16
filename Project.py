@@ -185,6 +185,10 @@ with tab2:
         radio1 = st.radio('Điểm từng Session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=True)
 with tab3:
     slider = st.slider('Số nhóm', 2, 5, 3)
+    def average(row):
+      return (row['S1']+row['S2']+row['S3']+row['S4']+row['S5']+row['S7']+row['S8']+row['S9'])/8
+    df['HW-AVG'] = df.apply(average, axis=1)
+    X = df[['GPA', 'HW-AVG']].values
     def xetnhom(aa):
       kmeans = KMeans(n_clusters=aa, n_init='auto')
       kmeans.fit(X)
@@ -200,10 +204,6 @@ with tab3:
 
 with tab4:
     radio2 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
-    def average(row):
-      return (row['S1']+row['S2']+row['S3']+row['S4']+row['S5']+row['S7']+row['S8']+row['S9'])/8
-    df['HW-AVG'] = df.apply(average, axis=1)
-    X = df[['GPA', 'HW-AVG']].values
     model = LinearRegression()
     x1=df['GPA'].values
     y1=df['HW-AVG'].values
