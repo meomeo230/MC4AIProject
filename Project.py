@@ -15,7 +15,8 @@ df['S6'].fillna(0, inplace=True)
 df['S7'].fillna(0, inplace=True)
 df['S8'].fillna(0, inplace=True)
 df['S9'].fillna(0, inplace=True)
-df['S10'].fillna(0, inplace=True)df['REG-MC4AI'].fillna('N', inplace=True)
+df['S10'].fillna(0, inplace=True)
+df['REG-MC4AI'].fillna('N', inplace=True)
 
 def calculate(row):
   if row['CLASS'].find("CV") !=-1:
