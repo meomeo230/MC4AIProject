@@ -9,7 +9,8 @@ tab1, tab2, tab3, tab4 = st.tabs(["Danh sách", "Biểu đồ", "Phân nhóm", "
 with tab1:
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        check = st.checkbox('Giới tính', ('Nam', 'Nữ'), horizontal=False)
+        check = st.checkbox('Nam')
+        check1 = st.checkbox('Nữ')
         
     with col2:
         radio = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
