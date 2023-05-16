@@ -192,20 +192,10 @@ with tab3:
       plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
       plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
       plt.show()
-#2 nhóm
-    xetnhom(2)
+      
+    xetnhom(slider)
     draw1()
 
-#3 nhóm
-    xetnhom(3)
-    draw1()
-
-#4 nhóm
-    xetnhom(4)
-    draw1()
-
-    xetnhom(5)
-    draw1()
 with tab4:
     radio2 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
     def average(row):
