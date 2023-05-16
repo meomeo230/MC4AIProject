@@ -10,8 +10,8 @@ with tab1:
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.write('Giới tính')
-        check = st.checkbox('Nam')
-        check1 = st.checkbox('Nữ')
+        check = st.checkbox('Nam', horizontal=True)
+        check1 = st.checkbox('Nữ', horizontal=True)
         
     with col2:
         radio = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
