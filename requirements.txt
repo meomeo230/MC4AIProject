@@ -2,4 +2,4 @@ numpy
 matplotlib
 streamlit
 plotly
-scikit_learn
+scikit-learn
