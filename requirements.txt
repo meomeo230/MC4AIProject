@@ -1,4 +1,4 @@
 numpy
 matplotlib
 streamlit
-plotly
+plotly.express
