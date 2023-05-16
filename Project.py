@@ -40,7 +40,7 @@ with tab1:
         k7 = st.checkbox('Sử Địa', value=True)
         k8 = st.checkbox('Trung Nhật', value=True)
         
-     with co5:
+    with co5:
         k9 = st.checkbox('TH/SN', value=True)
         k0 = st.checkbox('Khác', value=True)
         
