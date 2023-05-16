@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
+from sklearn.linear_model import LinearRegression
+import plotly.graph_objects as go
 
 df = pd.read_csv("https://raw.githubusercontent.com/meomeo230/MC4AIProject/main/score.csv")
 
@@ -206,5 +208,37 @@ with tab3:
     draw1()
 with tab4:
     radio2 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
+    def average(row):
+      return (row['S1']+row['S2']+row['S3']+row['S4']+row['S5']+row['S7']+row['S8']+row['S9'])/8
+    df['HW-AVG'] = df.apply(average, axis=1)
+    X = df[['GPA', 'HW-AVG']].values
+    model = LinearRegression()
+    x1=df['GPA'].values
+    y1=df['HW-AVG'].values
+    x1 = x1.reshape(-1,1)
 
-  
+    model.fit(x1, y1)
+#print("weights", model.coef_)
+#print("bias", model.intercept_)
+
+    x_line = np.array([0, 10]).reshape(-1,1)
+    y_line = model.predict(x_line)
+
+    plt.scatter(x1, y1)
+# plt.scatter(x_new, y_new)
+    plt.plot(x_line, y_line, c='y')
+    plt.xlabel('GPA')
+    plt.ylabel('HW-AVG')
+    plt.show()
+
+#3 đặc trưng
+
+    x3 = np.linspace(0, 10, 100)
+    y3 = np.linspace(0, 10, 100)
+    xx, yy = np.meshgrid(x3, y3)
+    xy = np.c_[xx.ravel(), yy.ravel()]
+    z=model.predict(xy)
+    z=z.reshape(xx.shape)
+    fig = go.Figure(data=[go.Scatter3d(x=df['S6'], y=df['S10'], z=df['HW-AVG'], mode='markers'),
+                      go.Surface(x=x, y=y, z=z)])
+    st.write(fig)
