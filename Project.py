@@ -271,7 +271,7 @@ with tab4:
       plt.plot(x_line, y_line, c='y')
       plt.xlabel('GPA')
       plt.ylabel('HW-AVG')
-      plt.show()
+      st.pyplot(plt.gcf()) # instead of plt.show()
 
     else:
 
