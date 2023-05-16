@@ -195,7 +195,7 @@ with tab3:
       
     xetnhom(slider)
     plt.figure(figsize=(4,4))
-    plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
+    plt.scatter(X[:, 0], X[:, 1])
     plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
     plt.show()
 
