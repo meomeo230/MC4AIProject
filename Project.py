@@ -204,9 +204,9 @@ with tab3:
       kmeans.fit(X)
  
     plt.figure(figsize=(4,4))
-    ffig = plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
-    #ffig = plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
-    st.write(ffig)
+    plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
+    plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
+    st.write(plt.show())
 
 with tab4:
     a1 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
