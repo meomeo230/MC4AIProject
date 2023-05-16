@@ -10,8 +10,8 @@ with tab1:
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.write('Giới tính')
-        check = st.checkbox('Nam', horizontal=True)
-        check1 = st.checkbox('Nữ', horizontal=True)
+        check = st.checkbox('Nam', value=True)
+        check1 = st.checkbox('Nữ', value=True)
         
     with col2:
         radio = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
@@ -23,9 +23,27 @@ with tab1:
         options = st.multiselect('Buổi', ('Sáng', 'Chiều'))
 
     st.write('Lớp chuyên')
-
-#if st.button('OK'):
-
+    co1, co2, co3, co4, co5 = st.columns(5)
+    with co1:
+        k1 = st.checkbox('Văn', value=True)
+        k2 = st.checkbox('Toán', value=True)
+        
+    with co2:
+        k1 = st.checkbox('Lý', value=True)
+        k2 = st.checkbox('Hóa', value=True)
+        
+    with co3:
+        k1 = st.checkbox('Anh', value=True)
+        k2 = st.checkbox('Tin', value=True)
+        
+    with co4:
+        k1 = st.checkbox('Sử Địa', value=True)
+        k2 = st.checkbox('Trung Nhật', value=True)
+        
+     with co5:
+        k1 = st.checkbox('TH/SN', value=True)
+        k2 = st.checkbox('Khác', value=True)
+        
 with tab2:
     tab5, tab6 = st.tabs(["Số lượng HS", "Điểm"])
     #with tab5:
