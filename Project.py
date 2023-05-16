@@ -134,8 +134,7 @@ with tab1:
 with tab2:
     tab5, tab6 = st.tabs(["Số lượng HS", "Điểm"])
     with tab5:
-        f1 = px.pie(df, names='Buổi học')
-        st.write(f1)
+        px.pie(df, names='Buổi học')
 
         f2 = px.pie(df, names='Phòng học')
         st.write(f2)
