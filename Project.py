@@ -43,7 +43,8 @@ with tab1:
     with co5:
         k9 = st.checkbox('TH/SN', value=True)
         k0 = st.checkbox('Khác', value=True)
-    st.write('Số HS:', 61)
+    st.write('Số HS:', 61, '(41 nam, 20 nữ)')
+    st.write('GPA: cao nhất', 10.0, 'thấp nhất', 1.8, 'trung bình', 6.8)
 
 with tab2:
     tab5, tab6 = st.tabs(["Số lượng HS", "Điểm"])
