@@ -45,6 +45,20 @@ def calculate2(row):
     return 'Chiều' 
 df['Buổi học'] = df.apply(calculate2, axis=1)
 
+def calculate4(row):
+  if row['CLASS-GROUP'] =='Khác':
+    return 'Thường'
+  else:
+    return 'Chuyên'
+df['Loại lớp'] = df.apply(calculate4, axis=1)
+
+#Phân loại học sinh khối:
+def calculate5(row):
+  if row['CLASS'].find("10") !=-1:
+    return 'Khối 10'
+  else:
+    return 'Khối 11&12' 
+df['Khối lớp'] = df.apply(calculate5, axis=1)
 
 tab1, tab2, tab3, tab4 = st.tabs(["Danh sách", "Biểu đồ", "Phân nhóm", "Phân loại"])
 
