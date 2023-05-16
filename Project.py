@@ -41,8 +41,15 @@ with tab1:
         else:
           df[(df['GENDER'] == "F")]
     with col2:
-        radio = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
-        
+        b = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
+        if b == 'Lớp 10':
+          df[(df['CLASS'].str.contains('10'))]
+        elif b == 'Lớp 11':
+          df[(df['CLASS'].str.contains('11'))]
+        elif b == 'Lớp 12':
+          df[(df['CLASS'].str.contains('12'))]
+        elif: 
+          df
     with col3:
         option = st.selectbox('Phòng', ('Tất cả', 'A114', 'A115'))
         
