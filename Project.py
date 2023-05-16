@@ -184,18 +184,26 @@ with tab2:
     with tab6:
         radio1 = st.radio('Điểm từng Session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=True)
 with tab3:
-    slider = st.slider('Số nhóm', 2, 5, 3)
+    sl = st.slider('Số nhóm', 2, 5, 3)
     def average(row):
       return (row['S1']+row['S2']+row['S3']+row['S4']+row['S5']+row['S7']+row['S8']+row['S9'])/8
     df['HW-AVG'] = df.apply(average, axis=1)
     X = df[['GPA', 'HW-AVG']].values
-    def xetnhom(aa):
-      kmeans = KMeans(n_clusters=aa, n_init='auto')
+    if sl == 2:
+      kmeans = KMeans(n_clusters=2, n_init='auto')
       kmeans.fit(X)
-      
-    xetnhom(slider)
+    elif sl == 3:
+      kmeans = KMeans(n_clusters=3, n_init='auto')
+      kmeans.fit(X)
+    elif sl == 4:
+     kmeans = KMeans(n_clusters=4, n_init='auto')
+     kmeans.fit(X) 
+    else:
+      kmeans = KMeans(n_clusters=5, n_init='auto')
+      kmeans.fit(X)
+ 
     plt.figure(figsize=(4,4))
-    plt.scatter(X[:, 0], X[:, 1])
+    plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
     plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
     plt.show()
 
