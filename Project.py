@@ -38,7 +38,7 @@ with tab1:
         st.write('Giới tính')
         if st.checkbox('Nam', value=True):
             df[(df['CLASS'].str.contains('10')) & (df["GENDER"] == "F")]
-        if = st.checkbox('Nữ', value=True)
+        if st.checkbox('Nữ', value=True)
             df[(df['CLASS'].str.contains('10')) & (df["GENDER"] == "M")]
     with col2:
         radio = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
