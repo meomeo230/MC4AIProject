@@ -193,14 +193,12 @@ with tab3:
       kmeans = KMeans(n_clusters=aa, n_init='auto')
       kmeans.fit(X)
       kmeans.labels_
-    def draw1():
-      plt.figure(figsize=(4,4))
-      plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
-      plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
-      plt.show()
       
     xetnhom(slider)
-    draw1()
+    plt.figure(figsize=(4,4))
+    plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
+    plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
+    plt.show()
 
 with tab4:
     radio2 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
