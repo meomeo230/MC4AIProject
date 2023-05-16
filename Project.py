@@ -48,7 +48,7 @@ with tab1:
           df[(df['CLASS'].str.contains('11'))]
         elif b == 'Lớp 12':
           df[(df['CLASS'].str.contains('12'))]
-        elif: 
+        else: 
           df
     with col3:
         option = st.selectbox('Phòng', ('Tất cả', 'A114', 'A115'))
