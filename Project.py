@@ -183,7 +183,53 @@ with tab2:
         f8 = px.pie(df, names='Loại lớp')
         st.write(f8)
     with tab6:
-        radio1 = st.radio('Điểm từng Session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=True)
+        rad = st.radio('Điểm từng Session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=True)
+        if rad == 'S1':
+          fug=px.box(df, x = 'S1', y='CLASS-GROUP')
+          st.write(fug)
+        elif rad == 'S2':
+          fug=px.box(df, x = 'S2', y='CLASS-GROUP')
+          st.write(fug)
+        elif rad == 'S3':
+          fug=px.box(df, x = 'S3', y='CLASS-GROUP')
+          st.write(fug)
+        elif rad == 'S4':
+          fug=px.box(df, x = 'S4', y='CLASS-GROUP')
+          st.write(fug)
+        elif rad == 'S5':
+          fug=px.box(df, x = 'S5', y='CLASS-GROUP')
+          st.write(fug)
+        elif rad == 'S6':
+          fug=px.box(df, x = 'S6', y='CLASS-GROUP')
+          st.write(fug)
+        elif rad == 'S7':
+          fug=px.box(df, x = 'S7', y='CLASS-GROUP')
+          st.write(fug)
+        elif rad == 'S8':
+          fug=px.box(df, x = 'S8', y='CLASS-GROUP')
+          st.write(fug)
+        elif rad == 'S9':
+          fug=px.box(df, x = 'S9', y='CLASS-GROUP')
+          st.write(fug)
+        elif rad == 'S10':
+          fug=px.box(df, x = 'S10', y='CLASS-GROUP')
+          st.write(fug)
+        else:
+          fug=px.box(df, x = 'GPA', y='GENDER')
+          st.write(fug)
+          st.info('Điểm trung bình của các bạn nam cao hơn điểm trung bình của các bạn nữ')
+          
+          fu=px.box(df, x = 'GPA', y='Phòng học')
+          st.write(fu)
+          st.info('GPA của các bạn học phòng 114 cao hơn GPA các bạn học phòng 115')
+          
+          fuu=px.box(df, x = 'GPA', y='Buổi học')
+          st.write(fuu)
+          st.info('GPA của các bạn học buổi chiều cao hơn GPA các bạn học buổi sáng')
+          
+          fugg=px.box(df, x = 'GPA', y='Loại lớp')
+          st.write(fugg)
+          st.info('GPA của các bạn học lớp chuyên cao hơn GPA các bạn học lớp thường')
 with tab3:
     sl = st.slider('Số nhóm', 2, 5, 3)
     def average(row):
