@@ -60,6 +60,16 @@ def calculate5(row):
     return 'Khối 11&12' 
 df['Khối lớp'] = df.apply(calculate5, axis=1)
 
+def calculate1(row):
+  if row['GPA'] >=5:
+    return 'Y'
+  else:
+    return 'N'
+df['LEN LOP'] = df.apply(calculate1, axis=1)
+df
+df[(df["GPA"] >=5)] 
+df[(df["GPA"] <=5)]
+
 tab1, tab2, tab3, tab4 = st.tabs(["Danh sách", "Biểu đồ", "Phân nhóm", "Phân loại"])
 
 with tab1:
