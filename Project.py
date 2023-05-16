@@ -113,21 +113,8 @@ with tab1:
 with tab2:
     tab5, tab6 = st.tabs(["Số lượng HS", "Điểm"])
     with tab5:
-        px.pie(df, names='Buổi học')
-
-        px.pie(df, names='Phòng học')
-
-        px.pie(df, names='GENDER')
-
-        px.pie(df, names='Khối lớp')
-
-        px.pie(df, names='CLASS-GROUP')
-
-        px.pie(df, names='REG-MC4AI')
-
-        px.pie(df, names='LEN LOP')
-
-        px.pie(df, names='Loại lớp')
+        fig = px.pie(df, names='Buổi học')
+        fig.show()
     with tab6:
         radio1 = st.radio('Điểm từng Session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=True)
 with tab3:
