@@ -35,11 +35,11 @@ tab1, tab2, tab3, tab4 = st.tabs(["Danh sách", "Biểu đồ", "Phân nhóm", "
 with tab1:
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.write('Giới tính')
-        if st.checkbox('Nam', value=True):
-            df[(df['CLASS'].str.contains('10')) & (df["GENDER"] == "M")]
-        if st.checkbox('Nữ', value=True):
-            df[(df['CLASS'].str.contains('10')) & (df["GENDER"] == "F")]
+        a = st.radio('Giới tính', ('Nam', 'Nữ'), horizontal=False)
+        if a == 'Nam':
+          df[(df["GENDER"] == "M")]
+        else:
+          df[(df["GENDER"] == "F")]
     with col2:
         radio = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
         
