@@ -5,8 +5,17 @@ import plotly.express as px
 
 df = pd.read_csv("https://raw.githubusercontent.com/meomeo230/MC4AIProject/main/score.csv")
 
-df.dropna(subset=['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'BONUS'], inplace=True)
-df['REG-MC4AI'].fillna('N', inplace=True)
+df['BONUS'].fillna(0, inplace=True)
+df['S1'].fillna(0, inplace=True)
+df['S2'].fillna(0, inplace=True)
+df['S3'].fillna(0, inplace=True)
+df['S4'].fillna(0, inplace=True)
+df['S5'].fillna(0, inplace=True)
+df['S6'].fillna(0, inplace=True)
+df['S7'].fillna(0, inplace=True)
+df['S8'].fillna(0, inplace=True)
+df['S9'].fillna(0, inplace=True)
+df['S10'].fillna(0, inplace=True)df['REG-MC4AI'].fillna('N', inplace=True)
 
 def calculate(row):
   if row['CLASS'].find("CV") !=-1:
