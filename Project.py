@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 from sklearn.linear_model import LinearRegression
 import plotly.graph_objects as go
+from sklearn.cluster import KMeans
+
 
 df = pd.read_csv("https://raw.githubusercontent.com/meomeo230/MC4AIProject/main/score.csv")
 
