@@ -209,40 +209,38 @@ with tab3:
     st.write(ffig)
 
 with tab4:
-    radio2 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
-    model = LinearRegression()
-    x1=df['GPA'].values
-    y1=df['HW-AVG'].values
-    x1 = x1.reshape(-1,1)
+    a1 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
+    if a1 == '2':
+      model = LinearRegression()
+      x1=df['GPA'].values
+      y1=df['HW-AVG'].values
+      x1 = x1.reshape(-1,1)
 
-    model.fit(x1, y1)
-#print("weights", model.coef_)
-#print("bias", model.intercept_)
+      model.fit(x1, y1)
 
-    x_line = np.array([0, 10]).reshape(-1,1)
-    y_line = model.predict(x_line)
+      x_line = np.array([0, 10]).reshape(-1,1)
+      y_line = model.predict(x_line)
 
-    plt.scatter(x1, y1)
-# plt.scatter(x_new, y_new)
-    plt.plot(x_line, y_line, c='y')
-    plt.xlabel('GPA')
-    plt.ylabel('HW-AVG')
-    plt.show()
+      plt.scatter(x1, y1)
+      plt.plot(x_line, y_line, c='y')
+      plt.xlabel('GPA')
+      plt.ylabel('HW-AVG')
+      plt.show()
 
-#3 đặc trưng
+    else:
 
-    X2 = df[['S6', 'S10']].values
-    y2 = df['HW-AVG'].values
+      X2 = df[['S6', 'S10']].values
+      y2 = df['HW-AVG'].values
 
-    model=LinearRegression()
-    model.fit(X2,y2)
+      model=LinearRegression()
+      model.fit(X2,y2)
 
-    x3 = np.linspace(0, 10,100 )
-    y3 = np.linspace(0, 10, 100)
-    xx, yy = np.meshgrid(x3, y3)
-    xy = np.c_[xx.ravel(), yy.ravel()]
-    z=model.predict(xy)
-    z=z.reshape(xx.shape)
-    fig = go.Figure(data=[go.Scatter3d(x=df['S6'], y=df['S10'], z=df['HW-AVG'], mode='markers'),
-                         go.Surface(x=x3, y=y3, z=z)])
-    st.write(fig)
+      x3 = np.linspace(0, 10,100 )
+      y3 = np.linspace(0, 10, 100)
+      xx, yy = np.meshgrid(x3, y3)
+      xy = np.c_[xx.ravel(), yy.ravel()]
+      z=model.predict(xy)
+      z=z.reshape(xx.shape)
+      fig = go.Figure(data=[go.Scatter3d(x=df['S6'], y=df['S10'], z=df['HW-AVG'], mode='markers'),
+                           go.Surface(x=x3, y=y3, z=z)])
+      st.write(fig)
