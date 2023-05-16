@@ -106,10 +106,10 @@ with tab1:
           df
           
     with col3:
-        c = st.radio('Phòng', ('Tất cả', 'A114', 'A115'), horizontal=False)
-        if c == 'A114':
+        e = st.radio('Phòng', ('Tất cả', 'A114', 'A115'), horizontal=False)
+        if e == 'A114':
           df[df['PYTHON-CLASS'].str.startswith('114')]
-        elif c == 'A115':
+        elif e == 'A115':
           df[df['PYTHON-CLASS'].str.startswith('115')]
         else:
           df
@@ -192,7 +192,6 @@ with tab3:
     def xetnhom(aa):
       kmeans = KMeans(n_clusters=aa, n_init='auto')
       kmeans.fit(X)
-      kmeans.labels_
       
     xetnhom(slider)
     plt.figure(figsize=(4,4))
