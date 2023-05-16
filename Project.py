@@ -205,7 +205,7 @@ with tab3:
  
     plt.figure(figsize=(4,4))
     ffig = plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
-    ffig = plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
+    #ffig = plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
     st.write(ffig)
 
 with tab4:
