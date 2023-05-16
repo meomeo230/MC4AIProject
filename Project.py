@@ -22,7 +22,7 @@ with tab1:
 
 st.text('Lớp chuyên')
 
-if st.button('OK'):
+#if st.button('OK'):
 
 with tab2:
     tab5, tab6 = st.tabs(["Số lượng HS", "Điểm"])
