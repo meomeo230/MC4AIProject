@@ -22,7 +22,7 @@ with tab1:
     with col4:
         options = st.multiselect('Buổi', ('Sáng', 'Chiều'))
 
-st.text('Lớp chuyên')
+    st.text('Lớp chuyên')
 
 #if st.button('OK'):
 
