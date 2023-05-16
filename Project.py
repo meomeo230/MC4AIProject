@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 df = pd.read_csv("https://raw.githubusercontent.com/meomeo230/MC4AIProject/main/score.csv")
 
@@ -30,6 +31,21 @@ def calculate(row):
     return 'Khác'
 df['CLASS-GROUP'] = df.apply(calculate, axis=1)
 
+def calculate3(row):
+  if row['PYTHON-CLASS'].find("114") !=-1:
+    return '114'
+  else:
+    return '115' 
+df['Phòng học'] = df.apply(calculate3, axis=1)
+
+def calculate2(row):
+  if row['PYTHON-CLASS'].find("S") !=-1:
+    return 'Sáng'
+  else:
+    return 'Chiều' 
+df['Buổi học'] = df.apply(calculate2, axis=1)
+
+
 tab1, tab2, tab3, tab4 = st.tabs(["Danh sách", "Biểu đồ", "Phân nhóm", "Phân loại"])
 
 with tab1:
@@ -40,6 +56,7 @@ with tab1:
           df[(df['GENDER'] == "M")]
         else:
           df[(df['GENDER'] == "F")]
+          
     with col2:
         b = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
         if b == 'Lớp 10':
@@ -50,12 +67,25 @@ with tab1:
           df[(df['CLASS'].str.contains('12'))]
         else: 
           df
+          
     with col3:
-        option = st.selectbox('Phòng', ('Tất cả', 'A114', 'A115'))
-        
+        c = st.radio('Phòng', ('Tất cả', 'A114', 'A115'), horizontal=False)
+        if c == 'A114':
+          df[df['PYTHON-CLASS'].str.startswith('114')]
+        elif c == 'A115':
+          df[df['PYTHON-CLASS'].str.startswith('115')]
+        else:
+          df
+          
     with col4:
-        options = st.multiselect('Buổi', ('Sáng', 'Chiều'))
-
+        d = st.radio('Buổi', ('Sáng', 'Chiều'))
+        if d == 'Sáng':
+          df[(df['PYTHON-CLASS'].str.endswith('S'))]
+        elif d == 'Chiều':
+          df[(df['PYTHON-CLASS'].str.endswith('C'))]
+        else:
+          df
+    
     st.write('Lớp chuyên')
     co1, co2, co3, co4, co5 = st.columns(5)
     with co1:
@@ -82,8 +112,22 @@ with tab1:
 
 with tab2:
     tab5, tab6 = st.tabs(["Số lượng HS", "Điểm"])
-    #with tab5:
-        
+    with tab5:
+        px.pie(df, names='Buổi học')
+
+        px.pie(df, names='Phòng học')
+
+        px.pie(df, names='GENDER')
+
+        px.pie(df, names='Khối lớp')
+
+        px.pie(df, names='CLASS-GROUP')
+
+        px.pie(df, names='REG-MC4AI')
+
+        px.pie(df, names='LEN LOP')
+
+        px.pie(df, names='Loại lớp')
     with tab6:
         radio1 = st.radio('Điểm từng Session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=True)
 with tab3:
