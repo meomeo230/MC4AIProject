@@ -9,7 +9,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["Danh sách", "Biểu đồ", "Phân nhóm", "
 with tab1:
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.text('Giới tính')
+        st.write('Giới tính')
         check = st.checkbox('Nam')
         check1 = st.checkbox('Nữ')
         
@@ -22,7 +22,7 @@ with tab1:
     with col4:
         options = st.multiselect('Buổi', ('Sáng', 'Chiều'))
 
-    st.text('Lớp chuyên')
+    st.write('Lớp chuyên')
 
 #if st.button('OK'):
 
