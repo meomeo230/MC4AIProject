@@ -20,3 +20,6 @@ Regression|Bùi Thị Bích Loan|17/05/23
 Classify|Bùi Thị Bích Loan|17/05/23
 # Link youtube
 https://youtu.be/whvh3mbUvgE
+
+# Link demo
+https://bloan0908-ai-score-analysis-asd15c.streamlit.app/
