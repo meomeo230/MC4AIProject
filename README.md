@@ -18,3 +18,5 @@ Phân tích điểm thi|Bùi Thị Bích Loan|17/05/23
 Clustering|Lê Minh Ngọc|17/05/23
 Regression|Bùi Thị Bích Loan|17/05/23
 Classify|Bùi Thị Bích Loan|17/05/23
+# Link youtube
+https://youtu.be/whvh3mbUvgE
