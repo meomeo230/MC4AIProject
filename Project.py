@@ -162,32 +162,32 @@ with tab2:
         st.subheader('Tỉ lệ giới tính')
         f3 = px.pie(df, names='GENDER')
         st.write(f3)
-        st.write('Dễ dàng nhận thấy học sinh nam quan tâm đến lớp AI nhiều hơn học sinh nữ')
+        st.info('Dễ dàng nhận thấy học sinh nam quan tâm đến lớp AI nhiều hơn học sinh nữ')
 
         st.subheader('Tỉ lệ khối lớp')
         f4 = px.pie(df, names='Khối lớp')
         st.write(f4)
-        st.write('Dễ dàng nhận thấy học sinh khối 10 quan tâm đến lớp AI nhiều hơn học sinh khối 11&12')
+        st.info('Dễ dàng nhận thấy học sinh khối 10 quan tâm đến lớp AI nhiều hơn học sinh khối 11&12')
         
         st.subheader('Tỉ lệ các lớp')
         f5 = px.pie(df, names='CLASS-GROUP')
         st.write(f5)
-        st.write('Dễ dàng nhận thấy học sinh chuyên toán quan tâm đến lớp AI nhất, sau đó đến lớp không chuyên và cuối cùng là chuyên văn')
+        st.info('Dễ dàng nhận thấy học sinh chuyên toán quan tâm đến lớp AI nhất, sau đó đến lớp không chuyên và cuối cùng là chuyên văn')
 
         st.subheader('Tỉ lệ mong muốn được học tiếp')
         f6 = px.pie(df, names='REG-MC4AI')
         st.write(f6)
-        st.write('Dễ dàng nhận thấy học sinh muốn đăng kí học tiếp lớp AI ít hơn học sinh không muốn đăng kí học tiếp')
+        st.info('Dễ dàng nhận thấy học sinh muốn đăng kí học tiếp lớp AI ít hơn học sinh không muốn đăng kí học tiếp')
 
         st.subheader('Tỉ lệ học sinh được lên lớp')
         f7 = px.pie(df, names='LEN LOP')
         st.write(f7)
-        st.write('Có thể dễ dàng nhận thấy học sinh có khả năng lên lớp chiếm tỉ lệ cao hơn')
+        st.info('Có thể dễ dàng nhận thấy học sinh có khả năng lên lớp chiếm tỉ lệ cao hơn')
 
         st.subheader('Tỉ lệ học sinh chuyên và thường')
         f8 = px.pie(df, names='Loại lớp')
         st.write(f8)
-        st.write('Có thể dễ dàng nhận thấy học sinh quan tâm lớp AI chủ yếu là học sinh lớp chuyên')
+        st.info('Có thể dễ dàng nhận thấy học sinh quan tâm lớp AI chủ yếu là học sinh lớp chuyên')
 
     with tab6:
         rad = st.radio('Điểm từng Session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=True)
@@ -243,7 +243,7 @@ with tab2:
           st.info('GPA của các bạn học lớp chuyên cao hơn GPA các bạn học lớp thường')
           
           st.write('Điểm trung bình cao nhất là:', max(df['GPA']))
-          st.write('Điểm trung bình thâp nhất là:', min(df['GPA']))
+          st.write('Điểm trung bình thấp nhất là:', min(df['GPA']))
           st.write('Điểm trung bình của tất cả các lớp AI:', np.mean(df['GPA']))
 with tab3:
     sl = st.slider('Số nhóm', 2, 5, 3)
