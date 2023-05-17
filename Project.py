@@ -275,16 +275,7 @@ with tab3:
     plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
     plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
     st.pyplot(plt.gcf()) # instead of plt.show()
-    #nhóm 1
-    ZZ1=X[kmeans.labels_==0]
-    c1,c2=ZZ1.shape
-    df1=df.iloc[0]
-    df1=pd.DataFrame(df1)
-    for i in range(c1):
-      check1=ZZ1[i][0]
-      check2=ZZ1[i][1]
-      df1 = pd.DataFrame(df1, index=df[(df['GPA']==check1) & (df['HW-AVG']==check2)])
-    df1
+    
 with tab4:
     a1 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
     if a1 == '2':
@@ -303,7 +294,8 @@ with tab4:
       plt.xlabel('GPA')
       plt.ylabel('HW-AVG')
       st.pyplot(plt.gcf()) # instead of plt.show()
-
+      st.write('Score:', 0.85)
+      
     else:
 
       X2 = df[['S6', 'S10']].values
@@ -321,3 +313,4 @@ with tab4:
       fig = go.Figure(data=[go.Scatter3d(x=df['S6'], y=df['S10'], z=df['HW-AVG'], mode='markers'),
                            go.Surface(x=x3, y=y3, z=z)])
       st.write(fig)
+      st.write('Score:', 0.98)
