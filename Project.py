@@ -105,11 +105,13 @@ with tab1:
     st.write('Số HS:', 61, '(41 nam, 20 nữ)')
     st.write('GPA: cao nhất', 10.0, 'thấp nhất', 1.8, 'trung bình', 6.8)
     
+    st.subheader('Giới tính')
     if a == 'Nam':
       df[(df['GENDER'] == "M")]
     else:
       df[(df['GENDER'] == "F")]
     
+    st.subheader('Khối lớp')
     if b == 'Lớp 10':
       df[(df['CLASS'].str.contains('10'))]
     elif b == 'Lớp 11':
@@ -119,20 +121,23 @@ with tab1:
     else: 
       df
     
+    st.subheader('Phòng')
     if e == 'A114':
       df[df['PYTHON-CLASS'].str.startswith('114')]
     elif e == 'A115':
       df[df['PYTHON-CLASS'].str.startswith('115')]
     else:
       df
-          
+    
+    st.subheader('Buổi học')
     if d == 'Sáng':
       df[(df['PYTHON-CLASS'].str.endswith('S'))]
     elif d == 'Chiều':
       df[(df['PYTHON-CLASS'].str.endswith('C'))]
     else:
       df
-      
+    
+    st.subheader('Lớp chuyên')
     if op == 'Văn':
       df[(df["CLASS-GROUP"] == 'Chuyên Văn')]
     elif op == 'Toán':
