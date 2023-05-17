@@ -302,8 +302,8 @@ with tab3:
       print('Điểm trung bình homework thấp nhất nhóm 3 là:',min(ZZ2[1]))
 
     elif sl == 4:
-     kmeans = KMeans(n_clusters=4, n_init='auto')
-     kmeans.fit(X) 
+      kmeans = KMeans(n_clusters=4, n_init='auto')
+      kmeans.fit(X) 
       
       #nhóm 1 
       ZZ1=X[kmeans.labels_==0]
