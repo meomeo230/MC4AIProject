@@ -123,28 +123,9 @@ with tab1:
           df[(df['PYTHON-CLASS'].str.endswith('C'))]
         else:
           df
+          
+    option = st.selectbox('Lớp chuyên', ('Văn', 'Toán', 'Lý', 'Hóa', 'Anh', 'Tin', 'Sử Địa', 'Trung Nhật', 'TH/SN', 'Khác'))
     
-    st.write('Lớp chuyên')
-    co1, co2, co3, co4, co5 = st.columns(5)
-    with co1:
-        k1 = st.checkbox('Văn', value=True)
-        k2 = st.checkbox('Toán', value=True)
-        
-    with co2:
-        k3 = st.checkbox('Lý', value=True)
-        k4 = st.checkbox('Hóa', value=True)
-        
-    with co3:
-        k5 = st.checkbox('Anh', value=True)
-        k6 = st.checkbox('Tin', value=True)
-        
-    with co4:
-        k7 = st.checkbox('Sử Địa', value=True)
-        k8 = st.checkbox('Trung Nhật', value=True)
-        
-    with co5:
-        k9 = st.checkbox('TH/SN', value=True)
-        k0 = st.checkbox('Khác', value=True)
     st.write('Số HS:', 61, '(41 nam, 20 nữ)')
     st.write('GPA: cao nhất', 10.0, 'thấp nhất', 1.8, 'trung bình', 6.8)
 
