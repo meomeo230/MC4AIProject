@@ -264,17 +264,17 @@ with tab3:
       
       #nhóm 1 
       ZZ1=X[kmeans.labels_==0]
-      print('Điểm GPA cao nhất nhóm 1 là:',max(ZZ1[0]))
-      print('Điểm GPA thấp nhất nhóm 1 là:',min(ZZ1[0]))
-      print('Điểm trung bình homework cao nhất nhóm 1 là:',max(ZZ1[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 1 là:',min(ZZ1[1]))
+      st.write('Điểm GPA cao nhất nhóm 1 là:',max(ZZ1[0]))
+      st.write('Điểm GPA thấp nhất nhóm 1 là:',min(ZZ1[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 1 là:',max(ZZ1[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 1 là:',min(ZZ1[1]))
 
       #nhóm 2
       ZZ=X[kmeans.labels_==1]
-      print('Điểm GPA cao nhất nhóm 2 là:',max(ZZ[0]))
-      print('Điểm GPA thấp nhất nhóm 2 là:',min(ZZ[0]))
-      print('Điểm trung bình homework cao nhất nhóm 2 là:',max(ZZ[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 2 là:',min(ZZ[1]))
+      st.write('Điểm GPA cao nhất nhóm 2 là:',max(ZZ[0]))
+      st.write('Điểm GPA thấp nhất nhóm 2 là:',min(ZZ[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 2 là:',max(ZZ[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 2 là:',min(ZZ[1]))
 
     elif sl == 3:
       kmeans = KMeans(n_clusters=3, n_init='auto')
@@ -282,24 +282,24 @@ with tab3:
       
       #nhóm 1 
       ZZ1=X[kmeans.labels_==0]
-      print('Điểm GPA cao nhất nhóm 1 là:',max(ZZ1[0]))
-      print('Điểm GPA thấp nhất nhóm 1 là:',min(ZZ1[0]))
-      print('Điểm trung bình homework cao nhất nhóm 1 là:',max(ZZ1[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 1 là:',min(ZZ1[1]))
+      st.write('Điểm GPA cao nhất nhóm 1 là:',max(ZZ1[0]))
+      st.write('Điểm GPA thấp nhất nhóm 1 là:',min(ZZ1[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 1 là:',max(ZZ1[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 1 là:',min(ZZ1[1]))
 
       #nhóm 2
       ZZ=X[kmeans.labels_==1]
-      print('Điểm GPA cao nhất nhóm 2 là:',max(ZZ[0]))
-      print('Điểm GPA thấp nhất nhóm 2 là:',min(ZZ[0]))
-      print('Điểm trung bình homework cao nhất nhóm 2 là:',max(ZZ[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 2 là:',min(ZZ[1]))
+      st.write('Điểm GPA cao nhất nhóm 2 là:',max(ZZ[0]))
+      st.write('Điểm GPA thấp nhất nhóm 2 là:',min(ZZ[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 2 là:',max(ZZ[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 2 là:',min(ZZ[1]))
 
       #nhóm 3
       ZZ2=X[kmeans.labels_==2]
-      print('Điểm GPA cao nhất nhóm 3 là:',max(ZZ2[0]))
-      print('Điểm GPA thấp nhất nhóm 3 là:',min(ZZ2[0]))
-      print('Điểm trung bình homework cao nhất nhóm 3 là:',max(ZZ2[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 3 là:',min(ZZ2[1]))
+      st.write('Điểm GPA cao nhất nhóm 3 là:',max(ZZ2[0]))
+      st.write('Điểm GPA thấp nhất nhóm 3 là:',min(ZZ2[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 3 là:',max(ZZ2[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 3 là:',min(ZZ2[1]))
 
     elif sl == 4:
       kmeans = KMeans(n_clusters=4, n_init='auto')
@@ -307,17 +307,17 @@ with tab3:
       
       #nhóm 1 
       ZZ1=X[kmeans.labels_==0]
-      print('Điểm GPA cao nhất nhóm 1 là:',max(ZZ1[0]))
-      print('Điểm GPA thấp nhất nhóm 1 là:',min(ZZ1[0]))
-      print('Điểm trung bình homework cao nhất nhóm 1 là:',max(ZZ1[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 1 là:',min(ZZ1[1]))
+      st.write('Điểm GPA cao nhất nhóm 1 là:',max(ZZ1[0]))
+      st.write('Điểm GPA thấp nhất nhóm 1 là:',min(ZZ1[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 1 là:',max(ZZ1[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 1 là:',min(ZZ1[1]))
 
       #nhóm 2
       ZZ=X[kmeans.labels_==1]
-      print('Điểm GPA cao nhất nhóm 2 là:',max(ZZ[0]))
-      print('Điểm GPA thấp nhất nhóm 2 là:',min(ZZ[0]))
-      print('Điểm trung bình homework cao nhất nhóm 2 là:',max(ZZ[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 2 là:',min(ZZ[1]))
+      st.write('Điểm GPA cao nhất nhóm 2 là:',max(ZZ[0]))
+      st.write('Điểm GPA thấp nhất nhóm 2 là:',min(ZZ[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 2 là:',max(ZZ[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 2 là:',min(ZZ[1]))
 
       #nhóm 3
       ZZ2=X[kmeans.labels_==2]
@@ -328,10 +328,10 @@ with tab3:
 
       #nhóm 4
       ZZ3=X[kmeans.labels_==3]
-      print('Điểm GPA cao nhất nhóm 4 là:',max(ZZ3[0]))
-      print('Điểm GPA thấp nhất nhóm 4 là:',min(ZZ3[0]))
-      print('Điểm trung bình homework cao nhất nhóm 4 là:',max(ZZ3[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 4 là:',min(ZZ3[1]))
+      st.write('Điểm GPA cao nhất nhóm 4 là:',max(ZZ3[0]))
+      st.write('Điểm GPA thấp nhất nhóm 4 là:',min(ZZ3[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 4 là:',max(ZZ3[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 4 là:',min(ZZ3[1]))
       
     else:
       kmeans = KMeans(n_clusters=5, n_init='auto')
@@ -339,38 +339,38 @@ with tab3:
       
       #nhóm 1 
       ZZ1=X[kmeans.labels_==0]
-      print('Điểm GPA cao nhất nhóm 1 là:',max(ZZ1[0]))
-      print('Điểm GPA thấp nhất nhóm 1 là:',min(ZZ1[0]))
-      print('Điểm trung bình homework cao nhất nhóm 1 là:',max(ZZ1[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 1 là:',min(ZZ1[1]))
+      st.write('Điểm GPA cao nhất nhóm 1 là:',max(ZZ1[0]))
+      st.write('Điểm GPA thấp nhất nhóm 1 là:',min(ZZ1[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 1 là:',max(ZZ1[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 1 là:',min(ZZ1[1]))
 
       #nhóm 2
       ZZ=X[kmeans.labels_==1]
-      print('Điểm GPA cao nhất nhóm 2 là:',max(ZZ[0]))
-      print('Điểm GPA thấp nhất nhóm 2 là:',min(ZZ[0]))
-      print('Điểm trung bình homework cao nhất nhóm 2 là:',max(ZZ[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 2 là:',min(ZZ[1]))
+      st.write('Điểm GPA cao nhất nhóm 2 là:',max(ZZ[0]))
+      st.write('Điểm GPA thấp nhất nhóm 2 là:',min(ZZ[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 2 là:',max(ZZ[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 2 là:',min(ZZ[1]))
 
       #nhóm 3
       ZZ2=X[kmeans.labels_==2]
-      print('Điểm GPA cao nhất nhóm 3 là:',max(ZZ2[0]))
-      print('Điểm GPA thấp nhất nhóm 3 là:',min(ZZ2[0]))
-      print('Điểm trung bình homework cao nhất nhóm 3 là:',max(ZZ2[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 3 là:',min(ZZ2[1]))
+      st.write('Điểm GPA cao nhất nhóm 3 là:',max(ZZ2[0]))
+      st.write('Điểm GPA thấp nhất nhóm 3 là:',min(ZZ2[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 3 là:',max(ZZ2[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 3 là:',min(ZZ2[1]))
 
       #nhóm 4
       ZZ3=X[kmeans.labels_==3]
-      print('Điểm GPA cao nhất nhóm 4 là:',max(ZZ3[0]))
-      print('Điểm GPA thấp nhất nhóm 4 là:',min(ZZ3[0]))
-      print('Điểm trung bình homework cao nhất nhóm 4 là:',max(ZZ3[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 4 là:',min(ZZ3[1]))
+      st.write('Điểm GPA cao nhất nhóm 4 là:',max(ZZ3[0]))
+      st.write('Điểm GPA thấp nhất nhóm 4 là:',min(ZZ3[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 4 là:',max(ZZ3[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 4 là:',min(ZZ3[1]))
 
       #nhóm 5
       ZZ4=X[kmeans.labels_==4]
-      print('Điểm GPA cao nhất nhóm 5 là:',max(ZZ4[0]))
-      print('Điểm GPA thấp nhất nhóm 5 là:',min(ZZ4[0]))
-      print('Điểm trung bình homework cao nhất nhóm 5 là:',max(ZZ4[1]))
-      print('Điểm trung bình homework thấp nhất nhóm 5 là:',min(ZZ4[1]))
+      st.write('Điểm GPA cao nhất nhóm 5 là:',max(ZZ4[0]))
+      st.write('Điểm GPA thấp nhất nhóm 5 là:',min(ZZ4[0]))
+      st.write('Điểm trung bình homework cao nhất nhóm 5 là:',max(ZZ4[1]))
+      st.write('Điểm trung bình homework thấp nhất nhóm 5 là:',min(ZZ4[1]))
       
     plt.figure(figsize=(4,4))
     plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
