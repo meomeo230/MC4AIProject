@@ -270,7 +270,7 @@ with tab3:
     for i in range(c1):
       check1=ZZ1[i][0]
       check2=ZZ1[i][1]
-      df1df[(df['GPA']==check1) & (df['HW-AVG']==check2)])
+      df1df[(df['GPA']==check1) & (df['HW-AVG']==check2)]
     #nhóm 2
     ZZ=X[kmeans.labels_==1]
     c1,c2=ZZ.shape
