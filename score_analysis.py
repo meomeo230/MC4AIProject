@@ -286,15 +286,15 @@ with tab3:
      kmeans = KMeans(n_clusters=4, n_init='auto')
      kmeans.fit(X) 
       
-      ZZ1=X[kmeans.labels_==0]
-      ZZ2=X[kmeans.labels_==1]
-      ZZ3=X[kmeans.labels_==2]
-      ZZ4=X[kmeans.labels_==3]
-      for i in range(1,5):
-        st.write('Điểm GPA cao nhất nhóm i là:',max(ZZi[0]))
-        st.write('Điểm GPA thấp nhất nhóm i là:',min(ZZi[0]))
-        st.write('Điểm trung bình homework cao nhất nhóm i là:',max(ZZi[1]))
-        st.write('Điểm trung bình homework thấp nhất nhóm i là:',min(ZZi[1]))
+     ZZ1=X[kmeans.labels_==0]
+     ZZ2=X[kmeans.labels_==1]
+     ZZ3=X[kmeans.labels_==2]
+     ZZ4=X[kmeans.labels_==3]
+     for i in range(1,5):
+       st.write('Điểm GPA cao nhất nhóm i là:',max(ZZi[0]))
+       st.write('Điểm GPA thấp nhất nhóm i là:',min(ZZi[0]))
+       st.write('Điểm trung bình homework cao nhất nhóm i là:',max(ZZi[1]))
+       st.write('Điểm trung bình homework thấp nhất nhóm i là:',min(ZZi[1]))
     else:
       kmeans = KMeans(n_clusters=5, n_init='auto')
       kmeans.fit(X)
