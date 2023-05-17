@@ -6,7 +6,7 @@ Bùi Thị Bích Loan|11CTIN|bloan0908@gmail.com
 
 # Thông tin project
 ## Đề tài: Phân tích điểm thi lớp Python4AI
-## Các thư viện sử dụng: `numpy, matplotlib, scikit-learn, plotly`
+## Các thư viện sử dụng: `numpy, matplotlib, scikit-learn, plotly, streamlit`
 
 ## Các chức năng chính & kế hoạch thực hiện
 
