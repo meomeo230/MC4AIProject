@@ -264,7 +264,20 @@ with tab3:
     plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
     plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
     st.pyplot(plt.gcf()) # instead of plt.show()
-    
+    #nhóm 1
+    ZZ1=X[kmeans.labels_==0]
+    c1,c2=ZZ1.shape
+    for i in range(c1):
+      check1=ZZ1[i][0]
+      check2=ZZ1[i][1]
+      df1df[(df['GPA']==check1) & (df['HW-AVG']==check2)])
+    #nhóm 2
+    ZZ=X[kmeans.labels_==1]
+    c1,c2=ZZ.shape
+    for i in range(c1):
+      che1=ZZ[i][0]
+      che2=ZZ[i][1]
+      df[(df['GPA']==che1) & (df['HW-AVG']==che2)]
 with tab4:
     a1 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
     if a1 == '2':
