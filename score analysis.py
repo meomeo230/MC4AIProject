@@ -276,6 +276,19 @@ with tab3:
     plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1])
     st.pyplot(plt.gcf()) # instead of plt.show()
     
+    ZZ1=X[kmeans.labels_==0]
+    st.write('Điểm GPA cao nhất nhóm 1 là:',max(ZZ1[0]))
+    st.write('Điểm GPA thấp nhất nhóm 1 là:',min(ZZ1[0]))
+    st.write('Điểm trung bình homework cao nhất nhóm 1 là:',max(ZZ1[1]))
+    st.write('Điểm trung bình homework thấp nhất nhóm 1 là:',min(ZZ1[1]))
+
+    #nhóm 2
+    ZZ=X[kmeans.labels_==1]
+    st.write('Điểm GPA cao nhất nhóm 2 là:',max(ZZ[0]))
+    st.write('Điểm GPA thấp nhất nhóm 2 là:',min(ZZ[0]))
+    st.write('Điểm trung bình homework cao nhất nhóm 2 là:',max(ZZ[1]))
+    st.write('Điểm trung bình homework thấp nhất nhóm 2 là:',min(ZZ[1]))
+
 with tab4:
     a1 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
     if a1 == '2':
