@@ -267,17 +267,13 @@ with tab3:
     #nhóm 1
     ZZ1=X[kmeans.labels_==0]
     c1,c2=ZZ1.shape
+    df1=df.iloc[0]
+    df1=pd.DataFrame(df1)
     for i in range(c1):
       check1=ZZ1[i][0]
       check2=ZZ1[i][1]
-      df1df[(df['GPA']==check1) & (df['HW-AVG']==check2)]
-    #nhóm 2
-    ZZ=X[kmeans.labels_==1]
-    c1,c2=ZZ.shape
-    for i in range(c1):
-      che1=ZZ[i][0]
-      che2=ZZ[i][1]
-      df[(df['GPA']==che1) & (df['HW-AVG']==che2)]
+      df1 = pd.DataFrame(df1, index=df[(df['GPA']==check1) & (df['HW-AVG']==check2)])
+    df1
 with tab4:
     a1 = st.radio('Số đặc trưng', ('2', '3'), horizontal=True)
     if a1 == '2':
