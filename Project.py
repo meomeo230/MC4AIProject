@@ -90,41 +90,49 @@ with tab1:
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         a = st.radio('Giới tính', ('Nam', 'Nữ'), horizontal=False)
-        if a == 'Nam':
-          df[(df['GENDER'] == "M")]
-        else:
-          df[(df['GENDER'] == "F")]
-          
+
     with col2:
         b = st.radio('Khối lớp', ('Tất cả', 'Lớp 10', 'Lớp 11', 'Lớp 12'), horizontal=False)
-        if b == 'Lớp 10':
-          df[(df['CLASS'].str.contains('10'))]
-        elif b == 'Lớp 11':
-          df[(df['CLASS'].str.contains('11'))]
-        elif b == 'Lớp 12':
-          df[(df['CLASS'].str.contains('12'))]
-        else: 
-          df
-          
+
     with col3:
         e = st.radio('Phòng', ('Tất cả', 'A114', 'A115'), horizontal=False)
-        if e == 'A114':
-          df[df['PYTHON-CLASS'].str.startswith('114')]
-        elif e == 'A115':
-          df[df['PYTHON-CLASS'].str.startswith('115')]
-        else:
-          df
-          
+
     with col4:
         d = st.radio('Buổi', ('Sáng', 'Chiều'))
-        if d == 'Sáng':
-          df[(df['PYTHON-CLASS'].str.endswith('S'))]
-        elif d == 'Chiều':
-          df[(df['PYTHON-CLASS'].str.endswith('C'))]
-        else:
-          df
+
           
     op = st.selectbox('Lớp chuyên', ('Văn', 'Toán', 'Lý', 'Hóa', 'Anh', 'Tin', 'Sử Địa', 'Trung Nhật', 'TH/SN', 'Khác'))
+    st.write('Số HS:', 61, '(41 nam, 20 nữ)')
+    st.write('GPA: cao nhất', 10.0, 'thấp nhất', 1.8, 'trung bình', 6.8)
+    
+    if a == 'Nam':
+      df[(df['GENDER'] == "M")]
+    else:
+      df[(df['GENDER'] == "F")]
+    
+    if b == 'Lớp 10':
+      df[(df['CLASS'].str.contains('10'))]
+    elif b == 'Lớp 11':
+      df[(df['CLASS'].str.contains('11'))]
+    elif b == 'Lớp 12':
+       df[(df['CLASS'].str.contains('12'))]
+    else: 
+      df
+    
+    if e == 'A114':
+      df[df['PYTHON-CLASS'].str.startswith('114')]
+    elif e == 'A115':
+      df[df['PYTHON-CLASS'].str.startswith('115')]
+    else:
+      df
+          
+    if d == 'Sáng':
+      df[(df['PYTHON-CLASS'].str.endswith('S'))]
+    elif d == 'Chiều':
+      df[(df['PYTHON-CLASS'].str.endswith('C'))]
+    else:
+      df
+      
     if op == 'Văn':
       df[(df["CLASS-GROUP"] == 'Chuyên Văn')]
     elif op == 'Toán':
@@ -141,9 +149,7 @@ with tab1:
       df[(df["CLASS-GROUP"] == 'TH/SN')]
     else:
       df[(df["CLASS-GROUP"] == 'Khác')]
-    st.write('Số HS:', 61, '(41 nam, 20 nữ)')
-    st.write('GPA: cao nhất', 10.0, 'thấp nhất', 1.8, 'trung bình', 6.8)
-
+    
 with tab2:
     tab5, tab6 = st.tabs(["Số lượng HS", "Điểm"])
     with tab5:
