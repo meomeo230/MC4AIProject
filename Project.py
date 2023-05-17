@@ -124,8 +124,23 @@ with tab1:
         else:
           df
           
-    option = st.selectbox('Lớp chuyên', ('Văn', 'Toán', 'Lý', 'Hóa', 'Anh', 'Tin', 'Sử Địa', 'Trung Nhật', 'TH/SN', 'Khác'))
-    
+    op = st.selectbox('Lớp chuyên', ('Văn', 'Toán', 'Lý', 'Hóa', 'Anh', 'Tin', 'Sử Địa', 'Trung Nhật', 'TH/SN', 'Khác'))
+    if op == 'Văn':
+      df[(df["CLASS-GROUP"] == 'Chuyên Văn')]
+    elif op == 'Toán':
+      df[(df["CLASS-GROUP"] == 'Chuyên Toán')]
+    elif op == 'Anh':
+      df[(df["CLASS-GROUP"] == 'Chuyên Anh')]
+    elif op == 'Tin':
+      df[(df["CLASS-GROUP"] == 'Chuyên Tin')]
+    elif op == 'Sử Địa':
+      df[(df["CLASS-GROUP"] == 'Sử Địa')]
+    elif op == 'Trung Nhật':
+      df[(df["CLASS-GROUP"] == 'Trung Nhật')]
+    elif op == 'TH/SN':
+      df[(df["CLASS-GROUP"] == 'TH/SN')]
+    else:
+      df[(df["CLASS-GROUP"] == 'Khác')]
     st.write('Số HS:', 61, '(41 nam, 20 nữ)')
     st.write('GPA: cao nhất', 10.0, 'thấp nhất', 1.8, 'trung bình', 6.8)
 
